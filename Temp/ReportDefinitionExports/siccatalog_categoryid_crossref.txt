@@ -1,0 +1,140 @@
+	Crystal Report Professional v9.2 (32-bit) - Report Definition
+
+1.0 File Information
+
+	Report File: SIC Catalog By CategoryId, AdId (Cross Ref)
+	Version: 10.2
+
+2.0 Record Sort Fields
+	A - {SICCatalog.CategoryId}
+	A - {SICCatalog.AdBookAdId}
+
+3.0 Group Sort Fields
+
+4.0 Formulas
+
+4.1 Record Selection Formula
+	
+
+4.2 Group Selection Formula
+	
+
+4.3 Other Formulas
+
+5.0 Sectional Information
+
+5.1 Page Header Section
+	Visible, Keep Together
+
+	SIC
+		String, Visible, Left Alignment, Top Alignment, 
+		Keep Together
+
+
+
+	SICDESC
+		String, Visible, Left Alignment, Top Alignment, 
+		Keep Together
+
+
+
+	CategoryId
+		String, Visible, Left Alignment, Top Alignment, 
+		Keep Together
+
+
+
+	Keyword
+		String, Visible, Left Alignment, Top Alignment, 
+		Keep Together
+
+
+
+	PrintDate
+		Date, Visible, Right Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Windows Default Type: Use Windows Short Date, Date Order: Month Day Year, Year Type: Long, Month Type: Numeric Month, Day Type: Numeric Day, Leading Day Type: None, First Separator: '/', Second Separator: '/', Leading Day Separator: ''
+
+
+	ReportTitle
+		String, Visible, Default Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Word Wrap
+
+
+	AdId
+		String, Visible, Left Alignment, Top Alignment, 
+		Keep Together
+
+
+
+	CallTimeId
+		String, Visible, Horizontal Centre Alignment, Top Alignment, 
+		Keep Together
+
+
+
+	AdDesc
+		String, Visible, Left Alignment, Top Alignment, 
+		Keep Together
+
+
+
+5.2 Page Footer Section
+	Visible, New Page After, Keep Together, Print At Bottom of Page
+
+	Filename
+		String, Visible, Default Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Word Wrap
+
+
+	PageNofM
+		String, Visible, Right Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Word Wrap
+
+
+5.3 Report Header Section
+	Hidden, New Page Before
+
+5.4 Report Footer Section
+	Hidden, New Page After
+
+5.5 Details Section
+	Visible
+
+	Subsection.1 
+		Visible, Keep Together
+
+	{SICCatalog.SIC}
+		String, Visible, Default Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Word Wrap
+
+
+	{SICCatalog.SICDESC}
+		String, Visible, Default Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Word Wrap
+
+
+	{SICCatalog.CategoryId}
+		String, Visible, Default Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Word Wrap
+
+
+	{SICCatalog.Keyword}
+		String, Visible, Default Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Word Wrap
+
+
+	{SICCatalog.AdBookAdId}
+		String, Visible, Default Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Word Wrap
+
+
+	{SICCatalog.CallTimeId}
+		String, Visible, Horizontal Centre Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Word Wrap
+
+
+	{AdBookList.AdDesc}
+		String, Visible, Default Alignment, Top Alignment, 
+		Keep Together, Using System Default Formatting, Word Wrap
+
+

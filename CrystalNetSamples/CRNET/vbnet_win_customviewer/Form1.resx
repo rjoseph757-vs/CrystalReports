@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+            Microsoft ResX Schema 
+        
+            Version 1.3
+                
+            The primary goals of this format is to allow a simple XML format 
+            that is mostly human readable. The generation and parsing of the 
+            various data types are done through the TypeConverter classes 
+            associated with the data types.
+        
+            Example:
+        
+                ... ado.net/XML headers & schema ...
+                <resheader name="resmimetype">text/microsoft-resx</resheader>
+                <resheader name="version">1.3</resheader>
+                <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+                <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+                <data name="Name1">this is my long string</data>
+                <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+                <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+                    [base64 mime encoded serialized .NET Framework object]
+                </data>
+                <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+                    [base64 mime encoded string representing a byte array form of the .NET Framework object]
+                </data>
+        
+            There are any number of "resheader" rows that contain simple 
+            name/value pairs.
+            
+            Each data row contains a name, and value. The row also contains a 
+            type or mimetype. Type corresponds to a .NET class that support 
+            text/value conversion through the TypeConverter architecture. 
+            Classes that don't support this are serialized and stored with the 
+            mimetype set.
+                     
+            The mimetype is used for serialized objects, and tells the 
+            ResXResourceReader how to depersist the object. This is currently not 
+            extensible. For a given mimetype the value must be set accordingly:
+        
+            Note - application/x-microsoft.net.object.binary.base64 is the format 
+                   that the ResXResourceWriter will generate, however the reader can 
+                   read any of the formats listed below.
+        
+            mimetype: application/x-microsoft.net.object.binary.base64
+            value   : The object must be serialized with 
+                    : System.Serialization.Formatters.Binary.BinaryFormatter
+                    : and then encoded with base64 encoding.
+        
+            mimetype: application/x-microsoft.net.object.soap.base64
+            value   : The object must be serialized with 
+                    : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+                    : and then encoded with base64 encoding.
+            mimetype: application/x-microsoft.net.object.bytearray.base64
+            value   : The object must be serialized into a byte array 
+                    : using a System.ComponentModel.TypeConverter
+                    : and then encoded with base64 encoding.
+        -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CrystalReportViewer1.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="Refresh.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="Refresh.Image" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk22BAAAAAAAADYAAAAoAAAAEAAAABgAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////AAD/////////////////////////////////////////////////////
+        ////AAD/////////////////////////////////////////////////////////AAD/AAD/////////
+        ////////////////////////////////////////////AAD/AAD/////////////////////////////
+        ////////////////////AAD/AAD/AAD/AAD/////////////////////////////////////////////
+        AAD/AAD/AAD/AAD/////////////////////////////////////////////AAD/AAD/AAD/AAD/AAD/
+        ////////////////////////////////////////AAD/AAD/AAD/AAD/AAD/////////////////////
+        ////////////////////AAD/AAD/AAD/AAD/AAD/AAD/////////////////////////////////////
+        ////////AAD/AAD/AAD/AAD/AAD/AAD/////////////////////////////////////////AAD/AAD/
+        AAD/AAD/AAD/AAD/////////////////////////////////////////////AAD/AAD/AAD/AAD/AAD/
+        AAD/////////////////////////////////////////////AAD/AAD/AAD/AAD/AAD/AAD/////////
+        ////////////////////////////////////AAD/AAD/AAD/AAD/AAD/AAD/////////////////////
+        ////////////////////AAD/AAD/AAD/AAD/AAD/AAD/////////////////////////////////////
+        ////////AAD/AAD/AAD/AAD/AAD/AAD/////////////////////////////////////AAD/AAD/AAD/
+        AAD/AAD/AAD/AAD/AAD/////////////////////////////AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/
+        ////////////////////////////AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/////////////////////
+        ////////AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/////////////////////////////AAD/AAD/AAD/
+        AAD/AAD/AAD/AAD/AAD/////////////////////////////AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////
+</value>
+  </data>
+  <data name="Print.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="Print.Image" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1WCAAAAAAAADYAAAAoAAAAGgAAABoAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAA////////
+        ////////5eXlubm5wcHBwMDAu7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7vLy8
+        urq6yMjIn5+f6OjoAAD///////////////+lpaXf39+5ubnBwcH+/v76+vr5+fn5+fn5+fn5+fn4+Pj5
+        +fn5+fn5+fn5+fn5+fn6+vro6Oj7+/uurq7Hx8f9/f0AAP///////////9ra2s7Ozvj4+NXV1djY2JKS
+        koeHh5aWlp2dnZycnJubm6ioqKKiopqampubm5ubm5ycnJqamqioqNTU1M7Ozv///////wAA////////
+        ////kZGR////////////////////////////////////////////////////////////////////////
+        oaGh/f39////////AAD///////////+ioqL////////////////c3NzDw8Ofn5+urq6tra2urq6ioqL/
+        ///////Dw8OkpKSvr6+jo6OgoKCysrL///////////8AAP///////+bm5ru7u////5CQkKSkpOjo6OXl
+        5aSkpP///////////////+/v75ycnJeXl6Wlpfn5+f///////6ioqP///////////////wAA////////
+        5+fnvb29////////////////8vLytbW1oqKipqamxcXF////////////////////////////////oKCg
+        ////////////////AAD////////n5+e9vb3////7+/v9/f36+vr///////8AAACjo6P////////////9
+        /f2hoaHAwMChoaHFxcX///+qqqr///////////////8AAP///////+fn5729vf///6ysrLKysq2trf//
+        /////wICAr+/v/////////////////////b29vv7+/////j4+Kurq////////////////wAA////////
+        5+fnvb29////////////////////////AgICvLy8////////////////6Ojora2tq6ur7e3t+vr6rKys
+        ////////////////AAD////////n5+e9vb3///+SkpKTk5O7u7v///////8CAgLCwsLi4uK2trb+/v7/
+        ///////09PTS0tLz8/P5+fmsrKz///////////////8AAP///////+fn5729vf//////////////////
+        /////wMDA7q6up2dnZycnERERMzMzP////////////////n5+aysrP///////////////wAA////////
+        5+fnvb29////ubm5/Pz8rKys////////AgICvr6+////////////HR0d7u7u5ubmp6enpKSk////rKys
+        ////////////////AAD////////n5+e9vb3////u7u6urq7Y2Nj///////8CAgK9vb3///////////8o
+        KCiYmJjo6Ojh4eH////4+PisrKz///////////////8AAP///////+fn5729vf//////////////////
+        /////wAAAMTExP///////+Hh4QAAALW1tf////////////j4+KysrP///////////////wAA////////
+        5+fnvb29////////////////9/f3zs7OFRUVNzc3cnJyYGBgHh4ea2tr/////////////////f39p6en
+        ////////////////AAD////////n5+e9vb3////j4+Pb29v////////k5OT////////y8vLv7+/+/v7/
+        ///////7+/uMjIzT09O7u7vt7e3///////////////8AAP///////+fn5729vf////39/cXFxaWlpbCw
+        sK+vr6+vr66urre3t6GhoaSkpKGhoaGhoa+vr////////5iYmP///////////////////wAA////////
+        5+fnv7+/8PDw////////////9PT08/Pz9PT08/Pz+vr6////////////////7e3ttLS0zc3NoaGh////
+        ////////////////AAD////////n5+fAwMD4+Piurq7u7u6pqam1tbWzs7Ozs7Ozs7O0tLSjo6OgoKCP
+        j4+Tk5PGxsbn5+fp6emfn5////////////////////8AAP///////+jo6MPDw76+vqGhoaWlpcXFxf//
+        /////////////////////+Xl5f///////////////////5ubm////////////////////wAA////////
+        6+vrurq6w8PDo6Oj3Nzc////////////////////////////////////7u7uiYmJ/v7+////l5eX////
+        ////////////////AAD///////+urq75+fn////////Z2dmmpqaPj4+tra2Pj4+np6erq6urq6usrKyj
+        o6OXl5f////////d3d3CwsL///////////////////8AAP///////5+fn///////////////////////
+        /+rq6v///////////////////////////////////8fHx9TU1P///////////////////wAA9vb2aGho
+        8PDw8fHx7+/v7+/v7+/v7+/v7+/v8vLy7+/v7+/v7+/v7+/v7+/v7+/v7+/v8vLy2dnZtLS0////////
+        ////////////////AACpqanMzMy8vLy7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7
+        u7u6urrAwMCYmJj+/v7///////////////////////8AAA==
+</value>
+  </data>
+  <data name="Export.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="Export.Image" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1WCAAAAAAAADYAAAAoAAAAGgAAABoAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////AAD/////////////////////////////////////////////////////////////
+        //////////////////////////////////////////8AAP//////////////////////////////////
+        /////////////////////////////////////////////////////////////////////wAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAACA//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A
+        //+A//+A//+A//+A//+A//+A//+A//+A//+A//8AAAAAAAAAAID//4D//4D//4D//4D//4D//4D//4D/
+        /4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//wAAAAAAAAAAgP//
+        gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//
+        gP//gP//gP//AAAAAAAAAACA//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A
+        //+A//+A//+A//+A//+A//+A//+A//+A//+A//8AAAAAAAAAAID//4D//4D//4D//4D//4D//4D//4D/
+        /4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//wAAAAAAAAAAgP//
+        gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//
+        gP//gP//gP//AAAAAAAAAACA//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A
+        //+A//+A//+A//+A//+A//+A//+A//+A//+A//8AAAAAAAAAAID//4D//4D//4D//4D//4D//4D//4D/
+        /4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//wAAAAAAAAAAgP//
+        gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//
+        gP//gP//gP//AAAAAAAAAACA//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A//8AAACA//+A//+A
+        //+A//+A//+A//+A//+A//+A//+A//+A//+A//8AAAAAAAAAAID//4D//4D//4D//4D//4D//4D//4D/
+        /4D//4D//wAAAID//wAAAAAAAID//4D//4D//4D//4D//4D//4D//4D//4D//4D//wAAAAAAAAAAgP//
+        gP//gP//gP//gP//gP//gP//gP//AAAAAAAAgP//gP//gP//gP//AAAAgP//gP//gP//gP//gP//gP//
+        gP//gP//gP//AAAAAAAAAACA//+A//+A//+A//+A//+A//+A//8AAACA//+A//+A//+A//+A//+A//+A
+        //8AAAAAAACA//+A//+A//+A//+A//+A//+A//8AAAAAAAAAAID//4D//4D//4D//4D//4D//wAAAID/
+        /4D//4D//4D//4D//4D//4D//4D//4D//4D//wAAAID//4D//4D//4D//4D//4D//wAAAAAAAAAAgP//
+        gP//gP//gP//AAAAAAAAgP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//AAAAgP//gP//
+        gP//gP//gP//AAAAAAAAAACA//+A//+A//8AAACA//+A//+A//+A//+A//+A//+A//+A//+A//+A//+A
+        //+A//+A//+A//+A//8AAAAAAACA//+A//+A//8AAAAAAAAAAID//4D//wAAAID//4D//4D//4D//4D/
+        /4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//4D//wAAAID//4D//wAAAAAAAAAAAAAA
+        AAAAgP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//gP//
+        gP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////////////////////////
+        /////////////////////////////////////////////////////////////////////wAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////AAD/////////////////////////////////////////////////////////////
+        //////////////////////////////////////////8AAA==
+</value>
+  </data>
+  <data name="GroupTree.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="GroupTree.Image" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1WCAAAAAAAADYAAAAoAAAAGgAAABoAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////AAD/////////////////////////////////////////////////////////////
+        //////////////////////////////////////////8AAP//////////////////////////////////
+        /////////////////////////////////////////////////////////////////////wAA////////
+        /////////////////////////wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA
+        /wAA/wAA////////AAD/////////////////////////////////AAD/gAD/gAD/gAD/gAD/gAD/gAD/
+        gAD/gAD/gAD/gAD/gAD/gAD/gAD/gAD/AAD///////8AAP////////////8AAP8AAP8AAP8AAP8AAP8A
+        AP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP8AAP///////wAA////////
+        /////wAA/////////////////wAA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA
+        /4AA/wAA////////AAD/////////////AAD/////////////////AAD/AAD/AAD/AAD/AAD/AAD/AAD/
+        AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD///////8AAP////////////8AAP//////////////////
+        /////////////////////////////////////////////////////////////////////wAA////////
+        /////wAA////////////////////////////////////////////////////////////////////////
+        ////////////////AAD/////////////AAD/////////////////////////////////////////////
+        //////////////////////////////////////////8AAP////////////8AAP////////////////8A
+        AP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP///wAA////////
+        /////wAA/////////////////wAA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA
+        /4AA/4AA/wAA////AAD/////////////AAD/AAD/AAD/AAD/AAD/AAD/gAD/gAD/gAD/gAD/gAD/gAD/
+        gAD/gAD/gAD/gAD/gAD/gAD/gAD/gAD/gAD/AAD///8AAP////////////8AAP////////////////8A
+        AP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP8AAP///wAA////////
+        /////wAA/////////////////wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA
+        /wAA/wAA/wAA////AAD/////////////AAD/////////////////////////////////////////////
+        //////////////////////////////////////////8AAP////////////8AAP//////////////////
+        /////////////////////////////////////////////////////////////////////wAA////////
+        /////wAA////////////////////////////////////////////////////////////////////////
+        ////////////////AAD/////////////AAD/////////////////////////////////////////////
+        //////////////////////////////////////////8AAP////8AAP8AAP8AAP8AAP8AAP8AAP8AAP8A
+        AP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP///////////////////////////////wAA/////wAA
+        /4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/wAA////////////////
+        ////////////////AAD/////AAD/gAD/gAD/gAD/gAD/gAD/gAD/gAD/gAD/gAD/gAD/gAD/gAD/gAD/
+        gAD/gAD/AAD///////////////////////////////8AAP////8AAP+AAP+AAP+AAP+AAP+AAP+AAP+A
+        AP+AAP+AAP+AAP+AAP+AAP+AAP+AAP+AAP8AAP///////////////////////////////wAA/////wAA
+        /4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/4AA/wAA////////////////
+        ////////////////AAD/////AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/
+        AAD/AAD/AAD///////////////////////////////8AAA==
+</value>
+  </data>
+  <data name="Zoom.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="FindText.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="TextToFind.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="FirstPage.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="PageBack.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="GoToPage.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="PageForward.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="LastPage.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="Page.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Assembly</value>
+  </data>
+  <data name="$this.Name">
+    <value>Form1</value>
+  </data>
+</root>

@@ -1,0 +1,6 @@
+D:\CPP Net 2010\RAS2010_CsharpParameters\bin\Release\Unmanaged_RAS10_CSharp_Parameters.exe.config
+D:\CPP Net 2010\RAS2010_CsharpParameters\bin\Release\Unmanaged_RAS10_CSharp_Parameters.exe
+D:\CPP Net 2010\RAS2010_CsharpParameters\obj\Release\RAS2010_CsharpParameters.csprojResolveAssemblyReference.cache
+D:\CPP Net 2010\RAS2010_CsharpParameters\obj\Release\Unmanaged_RAS10_CSharp_Printers.frmMain.resources
+D:\CPP Net 2010\RAS2010_CsharpParameters\obj\Release\RAS2010_CsharpParameters.csproj.GenerateResource.Cache
+D:\CPP Net 2010\RAS2010_CsharpParameters\obj\Release\Unmanaged_RAS10_CSharp_Parameters.exe

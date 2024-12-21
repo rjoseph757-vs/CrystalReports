@@ -1,0 +1,304 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+{\*\generator Msftedit 5.41.15.1503;}\viewkind4\uc1\pard\f0\fs20 Private Sub uCopyCalls(strSrcAdProjId As String, strDstAdProjId As String, strProcessType As String)\par
+    \par
+    Const cLogTransType As String = "COPY CALLS"\par
+    \par
+    Dim mbTitle As String\par
+    Dim strCmd As String\par
+    Dim lngLogPkId As Long\par
+    Dim blRunStep As Boolean\par
+    Dim strCurrentStep As String\par
+    Dim strErrorMessage As String\par
+    \par
+    mbTitle = Me.Caption & "- uCopyCalls"\par
+    On Error GoTo ErrorHandler\par
+    \par
+    Screen.MousePointer = vbHourglass\par
+    blRunStep = True\par
+    \par
+    uSetMode AddMode\par
+    \par
+    lngLogPkId = uSaveChangeLogData(strDstAdProjId, cLogTransType, "BEGIN", 0)\par
+    \par
+    strCurrentStep = "Mark AdProject In Use ..."\par
+    uAdProjectsCallsLogDelete strDstAdProjId, "CallsQueue"\par
+    uAdProjectsCallsLogInsert strDstAdProjId, "CallsQueue", "Copying [" & strProcessType & "]"\par
+    \par
+    If blRunStep = True Then\par
+        strCurrentStep = "Copying Calls into the AdProjectsCalls Table"\par
+        strCmd = "EXEC uspAdProjectsCalls_BRCopy " & _\par
+            FSQL_Str(strSrcAdProjId, ", ") & _\par
+            FSQL_Str(strDstAdProjId, ", ") & _\par
+            FSQL_Str(strProcessType, "")\par
+        mR.psMsgWaitForCancel = "COPYING CALLS FROM:" & Me.lblAdProjIdNm & " ..."\par
+        'Debug.Print strCmd\par
+        mR.uExecuteReportSQL strCmd\par
+    End If\par
+        \par
+    If blRunStep = True Then\par
+        strCurrentStep = "Change the AdProject Status From 'PENDING' TO 'READY'"\par
+        uUpdateAdProjStatId strDstAdProjId, "PENDING", "READY"\par
+    End If\par
+    \par
+    If blRunStep = True Then\par
+        strCurrentStep = "Display 'Copy Complete!' MessageBox"\par
+        uDisplayStatus sbReport, "Insert Complete!"\par
+        Screen.MousePointer = vbDefault\par
+        MsgBox "CALLS FOR:" & vbCr & _\par
+            Trim(Me.lblAdProjIdNm) & " - " & "[" & strDstAdProjId & "]" & vbCr & vbCr & _\par
+            "HAVE BEEN COPIED ...", vbExclamation + vbOKOnly, "Copy Calls"\par
+    End If\par
+    \par
+    strCurrentStep = "uReloadAdProjIdCombo"\par
+    uReloadAdProjIdCombo\par
+\par
+    strCurrentStep = "uSetMode ViewMode"\par
+    uSetMode ViewMode\par
+    \par
+    strCurrentStep = "Unmark AdProject Is In Use ..."\par
+    uAdProjectsCallsLogDelete strDstAdProjId, "CallsQueue"\par
+    \par
+    If blRunStep = True Then\par
+        lngLogPkId = uSaveChangeLogData(strDstAdProjId, cLogTransType, "COMPLETED", 0)\par
+    Else\par
+        lngLogPkId = uSaveChangeLogData(strDstAdProjId, cLogTransType, "FAILED", 0)\par
+    End If\par
+\par
+Exit Sub\par
+\par
+ErrorHandler:\par
+    blRunStep = False 'only run the steps to cleanup (kinda like try ... finally!)\par
+    strErrorMessage = _\par
+        "Please Review ..." & vbCr & vbCr & _\par
+        "At The Time Of The Error, The Step In Progress That Failed Was:" & vbCr & vbCr & _\par
+        strCurrentStep & vbCr & vbCr\par
+    If ADOCONN.state = adStateOpen Then\par
+        strErrorMessage = strErrorMessage & "Resetting Call Count in Fact Sheet!" & vbCr\par
+    Else\par
+        strErrorMessage = strErrorMessage & "Unable To Reset Call Count in Fact Sheet!" & vbCr & _\par
+            "Please Restart PC & Re-Insert Calls!" & vbCr\par
+    End If\par
+    basLib01.DisplayError Err, mbTitle, strErrorMessage\par
+    \par
+    If ADOCONN.state = adStateOpen Then\par
+        strCmd = "EXECUTE uspAdProjectsCallsMade_UpdateCurrent 1, " & FSQL_Str(Me.txtAdProjId.Text, "")\par
+        uDataCommandExecute strCmd\par
+    End If\par
+    \par
+    Resume Next\par
+End Sub\par
+\par
+Private Sub uCopyCallsAsk(strSrcAdProjId As String, strDstAdProjId As String, strProcessType As String, strRerunCopyType As String)\par
+    Dim mbTitle As String\par
+    Dim mbPrompt As String\par
+    Dim mbButtons As Integer\par
+    Dim strPType As String\par
+    \par
+    mbTitle = Me.Caption & "- uCopyCallsAsk"\par
+    On Error GoTo ErrorHandler\par
+    \par
+    If GetKeyState(vbKeyControl) < 0 And GetKeyState(vbKeyShift) < 0 Then\par
+        ' unmark in use ... (used to fix failed run)!\par
+        uAdProjectsCallsLogDelete cboAdProjId.Text, "CallsQueue"\par
+    Else\par
+        If uAdProjectsCallsInUse(Me.cboAdProjId.Text) Then\par
+            Exit Sub\par
+        End If\par
+    End If\par
+    \par
+    mbPrompt = "Insert/Copy Selected Set Using [" & strProcessType & "] Style?"\par
+    \par
+    mbButtons = vbQuestion + vbYesNo\par
+    If MsgBox(mbPrompt, mbButtons, mbTitle) = vbNo Then\par
+        Me.uSetMode ViewMode\par
+        Me.uSetFocus Me.cboAdProjId\par
+        Exit Sub\par
+    End If\par
+    \par
+    'formalize the process used to copy the calls\par
+    Select Case UCase(strProcessType)\par
+        Case "PC"\par
+            strPType = "PC"\par
+        Case "CALLACCT"\par
+            strPType = "REPORT"\par
+    End Select\par
+    \par
+    uCopyCalls strSrcAdProjId, strDstAdProjId, strPType, strRerunCopyType\par
+    \par
+    Exit Sub\par
+\par
+ErrorHandler:\par
+    basLib01.DisplayError Err, mbTitle\par
+    Resume Next\par
+End Sub\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+Private Sub uInsertCallsAsk()\par
+    Dim mbTitle As String\par
+    Dim mbPrompt As String\par
+    Dim mbButtons As Integer\par
+    \par
+    mbTitle = Me.Caption & "- uInsertCallsAsk"\par
+    On Error GoTo ErrorHandler\par
+    \par
+    \par
+    If GetKeyState(vbKeyControl) < 0 And GetKeyState(vbKeyShift) < 0 Then\par
+        ' unmark in use ... (used to fix failed run)!\par
+        uAdProjectsCallsLogDelete cboAdProjId.Text, "CallsQueue"\par
+    Else\par
+        If uAdProjectsCallsInUse(Me.cboAdProjId.Text) Then\par
+            Exit Sub\par
+        End If\par
+    End If\par
+    \par
+    mbPrompt = "Insert Selected Set?"\par
+    mbButtons = vbQuestion + vbYesNo\par
+    If MsgBox(mbPrompt, mbButtons, mbTitle) = vbNo Then\par
+        Me.uSetMode ViewMode\par
+        Me.uSetFocus Me.cboAdProjId\par
+        Exit Sub\par
+    End If\par
+    \par
+    uInsertCalls\par
+    \par
+    Exit Sub\par
+\par
+ErrorHandler:\par
+    basLib01.DisplayError Err, mbTitle\par
+    Resume Next\par
+End Sub\par
+\par
+Private Sub uInsertCalls()\par
+    \par
+    Const cLogTransType As String = "INSERT CALLS"\par
+    \par
+    Dim mbTitle As String\par
+    Dim strCmd As String\par
+    Dim lngLogPkId As Long\par
+    Dim blRunStep As Boolean\par
+    Dim strCurrentStep As String\par
+    Dim strErrorMessage As String\par
+    Dim strCurAdProjId As String\par
+    \par
+    mbTitle = Me.Caption & "- uInsertCalls"\par
+    On Error GoTo ErrorHandler\par
+    \par
+    Screen.MousePointer = vbHourglass\par
+    blRunStep = True\par
+    \par
+    uSetMode AddMode\par
+    \par
+    strCurAdProjId = cboAdProjId.Text\par
+    lngLogPkId = uSaveChangeLogData(strCurAdProjId, cLogTransType, "BEGIN", 0)\par
+    \par
+    strCurrentStep = "Mark AdProject In Use ..."\par
+    uAdProjectsCallsLogDelete cboAdProjId.Text, "CallsQueue"\par
+    uAdProjectsCallsLogInsert cboAdProjId.Text, "CallsQueue", "Inserting"\par
+    \par
+    If blRunStep = True Then\par
+        strCurrentStep = "Inserting Calls into the AdProjectsCalls Table"\par
+        strCmd = spAdProjectsCallsPopulate & _\par
+            FSQL_Str(Me.cboAdProjId.Text, ", ") & _\par
+            FSQL_Str(Me.lblServerLocationId.Caption, "")\par
+        mR.psMsgWaitForCancel = "INSERTING CALLS FOR:" & Me.lblAdProjIdNm & " ..."\par
+        'Debug.Print strCmd\par
+        mR.uExecuteReportSQL strCmd\par
+    End If\par
+        \par
+    If blRunStep = True Then\par
+        strCurrentStep = "Change the AdProject Status From 'PENDING' TO 'READY'"\par
+        uUpdateAdProjStatId Me.cboAdProjId.Text, "PENDING", "READY"\par
+    End If\par
+    \par
+    If blRunStep = True Then\par
+        strCurrentStep = "Display 'Insert Complete!' MessageBox"\par
+        uDisplayStatus sbReport, "Insert Complete!"\par
+        Screen.MousePointer = vbDefault\par
+        MsgBox "CALLS FOR:" & vbCr & _\par
+            Trim(Me.lblAdProjIdNm) & " - " & "[" & Me.cboAdProjId.Text & "]" & vbCr & vbCr & _\par
+            "HAVE BEEN INSERTED ...", vbExclamation + vbOKOnly, "Insert Calls"\par
+    End If\par
+    \par
+    strCurrentStep = "uReloadAdProjIdCombo"\par
+    uReloadAdProjIdCombo\par
+\par
+    strCurrentStep = "uSetMode ViewMode"\par
+    uSetMode ViewMode\par
+    \par
+    strCurrentStep = "Unmark AdProject Is In Use ..."\par
+    uAdProjectsCallsLogDelete cboAdProjId.Text, "CallsQueue"\par
+    \par
+    If blRunStep = True Then\par
+        lngLogPkId = uSaveChangeLogData(strCurAdProjId, cLogTransType, "COMPLETED", 0)\par
+    Else\par
+        lngLogPkId = uSaveChangeLogData(strCurAdProjId, cLogTransType, "FAILED", 0)\par
+    End If\par
+\par
+Exit Sub\par
+\par
+ErrorHandler:\par
+    blRunStep = False 'only run the steps to cleanup (kinda like try ... finally!)\par
+    strErrorMessage = _\par
+        "Please Review ..." & vbCr & vbCr & _\par
+        "At The Time Of The Error, The Step In Progress That Failed Was:" & vbCr & vbCr & _\par
+        strCurrentStep & vbCr & vbCr\par
+    If ADOCONN.state = adStateOpen Then\par
+        strErrorMessage = strErrorMessage & "Resetting Call Count in Fact Sheet!" & vbCr\par
+    Else\par
+        strErrorMessage = strErrorMessage & "Unable To Reset Call Count in Fact Sheet!" & vbCr & _\par
+            "Please Restart PC & Re-Insert Calls!" & vbCr\par
+    End If\par
+    basLib01.DisplayError Err, mbTitle, strErrorMessage\par
+    \par
+    If ADOCONN.state = adStateOpen Then\par
+        strCmd = "EXECUTE uspAdProjectsCallsMade_UpdateCurrent 1, " & FSQL_Str(Me.txtAdProjId.Text, "")\par
+        uDataCommandExecute strCmd\par
+    End If\par
+    \par
+    Resume Next\par
+End Sub\par
+\par
+\par
+Private Sub ZZZcmdReInsertCalls_Click()\par
+    Dim strAdProjId As String\par
+    \par
+    strAdProjId = cboAdProjId.Text\par
+    \par
+    If GetKeyState(vbKeyControl) < 0 And GetKeyState(vbKeyShift) < 0 Then\par
+        ' unmark in use ... (used to fix failed run)!\par
+        uAdProjectsCallsLogDelete strAdProjId, "CallsQueue"\par
+    Else\par
+        If uAdProjectsCallsInUse(strAdProjId) Then\par
+            Exit Sub\par
+        End If\par
+    End If\par
+    \par
+    frmPWLogin.sTitleCaption = "Re-Insert Entire Set?"\par
+    frmPWLogin.sPasswordExpected = "MANAGER"\par
+    frmPWLogin.Show vbModal\par
+    If frmPWLogin.LoginSucceeded = True Then\par
+        uDeleteCalls\par
+        'uAdProjectsCallsLogDelete strAdProjId, "CallsQueue"\par
+        cboAdProjId.Text = strAdProjId\par
+        uReloadAdProjIdCombo\par
+        'uSetMode ViewMode\par
+        uInsertCalls\par
+        MsgBox "You Must Now Re-Apply Any Settings In The" & vbCr & _\par
+            "[AdProjects Assign & Print Categories] Form!", vbCritical + vbOKOnly, "Friendly Advice"\par
+    End If\par
+\par
+End Sub\par
+\par
+Private Sub ZZZcmdRefreshReruns_Click()\par
+    uRefreshReruns\par
+End Sub\par
+\par
+}
+ 

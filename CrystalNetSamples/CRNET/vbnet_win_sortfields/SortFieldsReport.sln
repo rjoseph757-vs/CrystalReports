@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SortFieldsReport", "SortFieldsReport.vbproj", "{E9C5F553-24DC-4D59-9D31-3DF8761F3DAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E9C5F553-24DC-4D59-9D31-3DF8761F3DAC}.Debug.ActiveCfg = Debug|.NET
+		{E9C5F553-24DC-4D59-9D31-3DF8761F3DAC}.Debug.Build.0 = Debug|.NET
+		{E9C5F553-24DC-4D59-9D31-3DF8761F3DAC}.Release.ActiveCfg = Release|.NET
+		{E9C5F553-24DC-4D59-9D31-3DF8761F3DAC}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "vbnet_win_passDatasetToMainAndSubreport", "vbnet_win_passDatasetToMainAndSubreport.vbproj", "{A2B98252-07BD-4E25-8500-A7CD9F961FAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A2B98252-07BD-4E25-8500-A7CD9F961FAF}.Debug.ActiveCfg = Debug|.NET
+		{A2B98252-07BD-4E25-8500-A7CD9F961FAF}.Debug.Build.0 = Debug|.NET
+		{A2B98252-07BD-4E25-8500-A7CD9F961FAF}.Release.ActiveCfg = Release|.NET
+		{A2B98252-07BD-4E25-8500-A7CD9F961FAF}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "vbnet_win_viewerdemo", "vbnet_win_viewerdemo.vbproj", "{A1820A63-99D1-4DC2-A47B-6C5B4FBE1571}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A1820A63-99D1-4DC2-A47B-6C5B4FBE1571}.Debug.ActiveCfg = Debug|.NET
+		{A1820A63-99D1-4DC2-A47B-6C5B4FBE1571}.Debug.Build.0 = Debug|.NET
+		{A1820A63-99D1-4DC2-A47B-6C5B4FBE1571}.Release.ActiveCfg = Release|.NET
+		{A1820A63-99D1-4DC2-A47B-6C5B4FBE1571}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SimpleLogonEngine", "http://localhost/CRNETSamples/crnet_web_vbnet_simplelogonEngine/SimpleLogonEngine.vbproj", "{71B2AA46-19FC-4982-AB17-09EC788935F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{71B2AA46-19FC-4982-AB17-09EC788935F2}.Debug.ActiveCfg = Debug|.NET
+		{71B2AA46-19FC-4982-AB17-09EC788935F2}.Debug.Build.0 = Debug|.NET
+		{71B2AA46-19FC-4982-AB17-09EC788935F2}.Release.ActiveCfg = Release|.NET
+		{71B2AA46-19FC-4982-AB17-09EC788935F2}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
